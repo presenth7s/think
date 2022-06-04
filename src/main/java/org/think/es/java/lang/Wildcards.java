@@ -9,13 +9,18 @@ import java.util.List;
 public class Wildcards {
     public static void main(String[] args) {
         List<Integer> list = Arrays.asList(1, 2, 3); // Integer extends Number
+        List<Object> objects = Arrays.asList(1,2,3);
         print0(list);
-        print1(list); // error
+       // print1(list); // error
         print2(list);
+
+       // print0(objects); // error
+        print1(objects);
+        print2(objects);
     }
 
     public static void print0(List<? extends Number> list) {
-        list.add(11); // error
+      //  list.add(11); // error
         Number number = list.get(0);
         for (Object element : list) {
             System.out.print(element + " ");
@@ -34,7 +39,7 @@ public class Wildcards {
     }
 
     public static void print2(List<?> list) {
-        list.add(0); // error
+     //   list.add(0); // error
         Object o = list.get(0);
         for (Object element: list) {
             System.out.print(element + " ");
