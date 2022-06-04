@@ -219,10 +219,15 @@ public class ObjectTest extends BooleanTest implements Serializable {
         System.out.println(clz.getClassLoader().getParent().getParent());
         System.out.println(clz.getName());
         System.out.println(clz.getPackage().getName());
+
+        System.out.println(test0(1, 2));
     }
 
-    public long test0(int p1, long p2) {
-        return 0L;
+    public static long test0(int p1, long p2) {
+        {
+            p2 = (long) p1 << 2;
+        }
+        return p2;
     }
 
     public Long test1(int p1, Long p2) {
