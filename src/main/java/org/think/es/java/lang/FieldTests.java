@@ -7,7 +7,6 @@ public class FieldTests {
         System.out.println(field0.getV1());
         System.out.println(field0.getV2());
 
-
         Field1 field1 = new Field1();
         field1.setV1(1);
         field1.setV2("field1");

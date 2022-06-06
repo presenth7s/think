@@ -4,11 +4,22 @@ public class Field1 extends Field0{
     private int    v1;
     private String v2;
 
+    static {
+        System.out.println("field1 static");
+    }
+
+    {
+        System.out.println("field1 {}");
+    }
+
+
     public Field1() {
+        System.out.println("Field1()");
     }
 
     public Field1(int v1, String v2) {
         super(v1, v2);
+        System.out.println("Field1(v1, v2)");
         this.v1 = v1;
     }
 
